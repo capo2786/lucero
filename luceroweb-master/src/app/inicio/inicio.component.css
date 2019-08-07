@@ -1,0 +1,48 @@
+.example-card {
+  max-width: 300px;
+  min-width: 300px;
+}
+
+.example-header-image {
+  background-image: url('../../assets/img/bglogoMenu.png');
+  background-size: cover;
+}
+.lead {
+  font-size: 1.90rem;
+  font-weight: 300;
+  color: rgb(243, 243, 243);
+  text-align: center;
+  font-style: italic;
+}
+.h1XD {
+  font-size: 2.90rem;
+  color: rgb(252, 252, 252);
+  text-align: center;
+}
+img.izquierda {
+  float: left;
+  margin-right: 20px;
+}
+
+img.derecha {
+  float: right;
+  margin-left: 20px;
+}
+img {
+  margin-bottom: 20px;
+}
+h2 {
+  font-style: italic;
+  font-size: 2.90rem;
+  clear: both;
+  color: rgb(252, 252, 252);
+  text-decoration: underline;
+}
+p{
+  color: rgb(252, 252, 252);
+  font-style: italic;
+  font-size: 0.90rem;
+}
+#cardcolor{
+background-color: aquamarine;
+}

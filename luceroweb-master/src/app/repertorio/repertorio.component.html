@@ -1,0 +1,22 @@
+<br>
+<div class="row">
+   
+    <div class="embed-container video" *ngFor="let slide of student_list" >
+        &nbsp;&nbsp;&nbsp;&nbsp;
+      <img src="{{ slide.imageUrl }}"  width="340" height="280"controls >
+    </div>
+    </div>
+    <br>
+    
+
+<mat-card-actions  *ngFor="let slide of student_lista" >
+    <mat-card-content>
+        <p>
+          {{slide.nombre}}
+        </p>
+      </mat-card-content>
+  <audio class="col-12" controls>  
+    <source src="{{ slide.cancionUrl }}">
+    </audio> 
+   
+</mat-card-actions>

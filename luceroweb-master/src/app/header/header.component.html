@@ -1,0 +1,96 @@
+<div>
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let slide of student_list" class="slide" id="slide">
+        <img src="{{ slide.imageUrl }}" alt="First slide"  width="100%" class="imagecenter">
+         </div>
+    </ngx-slick-carousel>      
+</div>
+
+<nav class="navbar navbar-expand-md fixed-top headerSecction navbar-dark" >
+    <div >      
+      <img  id="logo" src="../../assets/img/bglogo.png"  width="200" height="190" >
+  </div>
+  
+    <button class="navbar-toggler" data-toggle="collapse" data-target="collapse_target">
+      <span class="navbar-toggler-icon text-white"></span>
+    </button>
+    <div> 
+    <div class="collapse navbar-collapse" id="collapse_target">
+      <!--Menu de Mi perfil-->
+      <ul class="navbar-nav mr-auto">
+        <!--Acerca-->
+        <span class="opacity">
+        <li id="animacion" class="nav-item dropdown pretty-button" routerLinkActive="active">
+            <img  src="../../assets/img/guitarra-acustica.png"  routerLink='/inicio' width="40" height="40">
+          <a class="nav-link text-black"routerLink='/inicio'>
+            <i class="fa fa-fw fa-info-circle"></i>&nbsp;Quienes Somos
+          </a>
+        </li>
+      </span>
+  
+        <!--luceroysushow-->
+        <!--
+        <span class="opacity">
+        <li id="animacion" class="nav-item pretty-button"routerLinkActive="active">
+            <img src="../../assets/img/guitarra-acustica.png" routerLink='/luceroysushow' width="40" height="40">
+          <a class="nav-link text-white"routerLink='/luceroysushow'>
+            <i class="fa fa-fw fa-users"></i>&nbsp;Lucero y su Show
+          </a>
+        </li>
+        </span>
+        -->
+        <!--repertorio-->
+        <span class="opacity">
+        <li id="animacion" class="nav-item pretty-button"routerLinkActive="active">
+            <img   [routerLink]="['/repertorio']" routerLinkActive="router-link-active"  src="../../assets/img/musica.png"   width="40" height="40">
+          <a class="nav-link text-white"routerLink='/repertorio'>
+            <i class="fa fa-fw fa-briefcase"></i>&nbsp;Repertorio
+          </a>
+        </li>
+        </span>
+  
+         <!--Ofertas-->
+         <span class="opacity">
+         <li  id="animacion" class="nav-item pretty-button"routerLinkActive="active">
+            <img src="../../assets/img/camara-de-video.png"  routerLink='/videos' width="40" height="40">
+          <a class="nav-link text-white"routerLink='/videos'>
+            <i class="fa fa-fw fa-briefcase"></i>&nbsp;Videos
+        
+          </a>
+          
+        </li>
+        </span>
+  
+         <!--Ofertas-->
+         <!--li class="nav-item pretty-button"routerLinkActive="active">
+            <img src="../../assets/img/mas.png" width="30" height="30">
+          <a class="nav-link text-white"routerLink='/masartistas'>
+            <i class="fa fa-fw fa-briefcase"></i>&nbsp;Mas artistas
+          </a>
+        </li>-->
+  
+         <!--Ofertas-->
+         <span class="opacity">
+         <li id="animacion" class="nav-item pretty-button"routerLinkActive="active">
+            <img src="../../assets/img/carpeta.png" routerLink='/masservicios' width="40" height="40">
+          <a class="nav-link text-white"routerLink='/masservicios'>
+            <i class="fa fa-fw fa-briefcase"></i>&nbsp;Mas servicios 
+          </a>
+          
+        </li>
+        </span>
+        
+        <span class="opacity">
+        <li id="animacion" class="nav-item pretty-button"routerLinkActive="active">
+          <img src="../../assets/img/mas.png"  routerLink='/Reservas' width="40" height="40">
+        <a class="nav-link text-white"routerLink='/Reservas'>
+          <i class="fa fa-fw fa-briefcase"></i>&nbsp;Reservas
+        </a>
+      </li>
+      </span>
+      <li>
+  
+      </li>
+  
+        </ul> 
+      </div>

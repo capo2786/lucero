@@ -1,0 +1,25 @@
+.top-banner-div {
+    padding-top: 50px;
+    margin-bottom: 10px;
+    height: 250px;
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.counter {
+    font-size: 60px;
+}
+
+.video-area {
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    background-position: center center;
+    background-size: cover;
+    border: 20px solid #fff;
+    border-radius: 20px;
+    height: 650px;
+    -webkit-box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
+}

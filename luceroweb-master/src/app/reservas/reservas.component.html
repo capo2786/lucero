@@ -1,0 +1,142 @@
+<div class="container">
+  <mat-toolbar>
+      
+      <span>Reservar</span>
+      
+  </mat-toolbar>
+</div>
+<br>
+<form [formGroup]="service.form"  class="normal-form"(ngSubmit)="saveData()" >
+  <mat-grid-list cols="2" rowHeight="600px">
+    <mat-grid-tile>
+      <div class="controles-container" >
+        <div>
+          <img src="../../assets/img/nombre.png"> 
+        <mat-form-field>
+            
+          <input formControlName="nombre" matInput placeholder="Nombre" id="input">
+          <mat-error font size=2>Nombre es requerido.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['nombre'].touched && service.form.controls['nombre'].hasError('minlength')">Ingrese mínimo 3 caracteres.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['nombre'].touched && service.form.controls['nombre'].hasError('maxlength')">Ingrese máximo 30 caracteres.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['nombre'].touched && service.form.controls['nombre'].hasError('pattern')">Solo puede ingresar letras.</mat-error>
+        
+        </mat-form-field>
+      
+        &nbsp;&nbsp;
+        
+            <img src="../../assets/img/nombre2.png" float="left">
+        <mat-form-field >
+           
+          <input formControlName="apellido" matInput placeholder="Apellido"id="input">
+          <mat-error font size=2>Apellido es requerido.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['apellido'].touched && service.form.controls['apellido'].hasError('minlength')">Ingrese mínimo 3 caracteres.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['apellido'].touched && service.form.controls['apellido'].hasError('maxlength')">Ingrese máximo 30 caracteres.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['apellido'].touched && service.form.controls['apellido'].hasError('pattern')">Solo puede ingresar letras.</mat-error>
+        </mat-form-field>
+      </div>
+      <br>
+        <div>
+            <img src="../../assets/img/marcador-de-posicion.png" float="left">
+        <mat-form-field>
+            
+          <input formControlName="sector" matInput placeholder="Sector"id="input">
+      
+          <mat-error font size=2>Sector es requerido.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['sector'].touched && service.form.controls['sector'].hasError('minlength')">Ingrese mínimo 3 caracteres.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['sector'].touched && service.form.controls['sector'].hasError('maxlength')">Ingrese máximo 30 caracteres.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['sector'].touched && service.form.controls['sector'].hasError('pattern')">Solo puede ingresar letras.</mat-error>
+        </mat-form-field>
+      </div>
+       
+        <br>
+        <br>
+        <div>
+            
+            <img src="../../assets/img/ruta.png" float="left" >
+           
+        <mat-form-field>
+          <input formControlName="calleUno" matInput placeholder="Calle Principal"id="input">
+          <mat-error font size=2>Calle principal requerida</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['calleUno'].touched && service.form.controls['calleUno'].hasError('minlength')">Ingrese mínimo 3 caracteres.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['calleUno'].touched && service.form.controls['calleUno'].hasError('maxlength')">Ingrese máximo 30 caracteres.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['calleUno'].touched && service.form.controls['calleUno'].hasError('pattern')">Solo puede ingresar letras.</mat-error>
+        </mat-form-field>
+      
+        &nbsp;&nbsp;
+      
+          <img src="../../assets/img/mapa-de-ubicacion2.png" float="left">
+      
+        <mat-form-field>
+          <input formControlName="calleDos" matInput placeholder="Calle Secundaria"id="input">
+          <mat-error font size=2>Calle secundaria requerida</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['calleDos'].touched && service.form.controls['calleDos'].hasError('minlength')">Ingrese mínimo 3 caracteres.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['calleDos'].touched && service.form.controls['calleDos'].hasError('maxlength')">Ingrese máximo 30 caracteres.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['calleDos'].touched && service.form.controls['calleDos'].hasError('pattern')">Solo puede ingresar letras.</mat-error>
+        </mat-form-field>
+      </div>
+        <br><br>
+        <div>
+            <img src="../../assets/img/llamada-telefonica1.png" float="left" >
+        <mat-form-field>
+          <input formControlName="numero_contacto1" matInput placeholder="Celular-1"id="input">
+          <mat-error font size=2 *ngIf="service.form.controls['numero_contacto1'].errors?.required">El telefono es requerido.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['numero_contacto1'].touched && service.form.controls['numero_contacto1'].hasError('minlength')">Ingrese mínimo 10 números.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['numero_contacto1'].touched && service.form.controls['numero_contacto1'].hasError('pattern')">Solo puede ingresar números.</mat-error>
+        </mat-form-field>
+      
+      &nbsp;&nbsp;
+      
+          <img src="../../assets/img/telefono-inteligente2.png" float="left" >
+        <mat-form-field>
+          <input formControlName="numero_contacto" matInput placeholder="Celular-2"id="input">
+          <mat-error font size=2 *ngIf="service.form.controls['numero_contacto'].errors?.required">El telefono es requerido.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['numero_contacto'].touched && service.form.controls['numero_contacto'].hasError('minlength')">Ingrese mínimo 10 números.</mat-error>
+          <mat-error font size=2 *ngIf="service.form.controls['numero_contacto'].touched && service.form.controls['numero_contacto'].hasError('pattern')">Solo puede ingresar números.</mat-error>
+        </mat-form-field>
+      </div>
+        <br>
+        
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="controles-container">
+          <img src="../../assets/img/auriculares.png" float="left" >
+        
+        <mat-form-field>
+          <mat-select formControlName="servicio" placeholder="Servicios"*ngIf="items?.length >0 "id="input">
+            <mat-option>Seleccionar</mat-option>
+            <ng-container *ngFor="let item of items">
+              <mat-option value="{{item.campo1}}">{{item.campo1}}</mat-option>
+            </ng-container>
+          </mat-select>
+          <mat-error font size=2 *ngIf="service.form.controls['servicio'].touched && service.form.controls['servicio'].hasError('required')">Servicio requerido.</mat-error>
+        </mat-form-field>
+        
+        <br>
+      <div>
+            <img src="../../assets/img/calendario.png" float="left" >
+        
+        <mat-form-field>
+          <input formControlName="fecha" matInput [matDatepicker]="picker" placeholder="Fecha"id="input">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error font size=2 *ngIf="service.form.controls['fecha'].touched && service.form.controls['fecha'].hasError('required')">Servicio requerido.</mat-error>
+        </mat-form-field>
+      </div>
+       <br>
+       <div>
+          <img src="../../assets/img/reloj.png" float="left" >
+       
+       <mat-form-field>
+        <input formControlName="hora"type="Time"displayFormat="HH:mm" matInput id="input">
+        <mat-error font size=2>Hora es requerida.</mat-error>
+      </mat-form-field>
+    </div>
+      <div class="button-row">
+          <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid" (click)="saveData()">RESERVAR</button>
+         
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>
